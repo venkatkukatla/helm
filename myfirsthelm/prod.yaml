@@ -9,9 +9,22 @@ metadata:
 spec:
   replicas: 4
   containers:
-  image: httpd
+  image: nginx
   ports: 80
   containerPort: 80
+
+service:
+ apiVersion: v1
+ kind: Service
+ name: webapp-service
+ports:
+  name: http
+  protocol: TCP
+
+
+
+
+
 
 
 image:
@@ -47,7 +60,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 ingress:
@@ -85,4 +98,8 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelec
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
