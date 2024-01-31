@@ -28,7 +28,7 @@ pipeline {
         
         stage('deploy to eks') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'helm-config', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+               # withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'helm-config', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
                 sh "kubectl get all"  
                 sh "helm list"
                 // sh "helm install mychart1 myfirsthelm-0.1.0.tgz"
