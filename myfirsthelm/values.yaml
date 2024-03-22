@@ -9,7 +9,7 @@ metadata:
 spec:
   replicas: 4
   containers:
-  image: nginx
+  image: 041832314393.dkr.ecr.us-east-1.amazonaws.com/ecr-privite:latest
   ports: 80
   containerPort: 80
 
