@@ -28,7 +28,7 @@ ports:
 
 
 image:
-  repository: nginx
+  repository: 041832314393.dkr.ecr.us-east-1.amazonaws.com/ecr-privite:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
