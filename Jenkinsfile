@@ -32,7 +32,7 @@ pipeline {
                 sh "kubectl get all"  
                 sh "helm list"
                 // sh "helm install mychart1 myfirsthelm-0.1.0.tgz"
-                sh "helm upgrade --install mychart1 myfirsthelm-0.1.0.tgz -f ./myfirsthelm/dev-values.yaml"
+                sh "helm upgrade --install mychart1 myfirsthelm-0.1.0.tgz -f ./myfirsthelm/values.yaml"
                 sh "helm list"
                  sh "kubectl get all" 
     // some block
